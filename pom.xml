@@ -21,7 +21,7 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-  <version>11.4-0-SNAPSHOT</version>
+  <version>11.4-0</version>
 
   <name>EAM WS Hub Proxy Client</name>
   <description>JAX-WS client stubs generated from Infor EAM Web Services Toolkit WSDLs.</description>
@@ -92,7 +92,7 @@
 
   <scm>
     <connection>scm:git:ssh://git@github.com/cern-eam/eam-wshub-proxyclient.git</connection>
-    <tag>HEAD</tag>
+    <tag>eam-wshub-proxyclient-11.4-0</tag>
     <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
   </scm>
 
