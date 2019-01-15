@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright © 2019 CERN European Organization for Nuclear Research
+  Email: eam-service@cern.ch
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <https://www.gnu.org/licenses />.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ch.cern.eam</groupId>
+  <artifactId>eam-wshub-proxyclient</artifactId>
+  <packaging>jar</packaging>
+  <version>11.4-0-SNAPSHOT</version>
+
+  <name>EAM WS Hub Proxy Client</name>
+  <description>JAX-WS client stubs generated from Infor EAM Web Services Toolkit WSDLs.</description>
+  <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <infor.version>11.4</infor.version>
+    <infor.wsdls>https://raw.githubusercontent.com/infor-cloud/infor-eam/master/Infor%20EAM%20APIs%20for%20On%20Premise/Version%20${infor.version}/Wsdl</infor.wsdls>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>GPL-3.0-or-later</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>CERN European Organization for Nuclear Research</name>
+    <url>https://home.cern</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>lpater</id>
+      <name>Lukasz Piotr Pater</name>
+      <email>Lukasz.Pater@cern.ch</email>
+      <organization>CERN European Organization for Nuclear Research</organization>
+      <organizationUrl>https://home.cern</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Zurich</timezone>
+    </developer>
+
+    <developer>
+      <id>aansel</id>
+      <name>Antoine Ansel</name>
+      <email>antoine.ansel@cern.ch</email>
+      <organization>CERN European Organization for Nuclear Research</organization>
+      <organizationUrl>https://home.cern</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Zurich</timezone>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>Github</system>
+    <url>https://github.com/cern-eam/javamerger-maven-plugin/issues</url>
+  </issueManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/cern-eam/eam-wshub-proxyclient.git</connection>
+    <tag>HEAD</tag>
+    <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>maven-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <build>
+
+    <resources>
+      <resource>
+        <directory>.</directory>
+        <targetPath>META-INF/</targetPath>
+        <includes>
+          <include>COPYING</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
+          <goals>deploy</goals>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>oss-cern-eam</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>false</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jaxws-maven-plugin</artifactId>
+        <version>2.5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>wsimport</goal>
+            </goals>
+            <configuration>
+              <xadditionalHeaders>true</xadditionalHeaders>
+              <vmArgs>
+                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+              </vmArgs>
+              <bindingFiles>
+                <bindingFile>${project.basedir}/custombindings.xml</bindingFile>
+              </bindingFiles>
+              <wsdlUrls>
+                <wsdlUrl>${infor.wsdls}/Administration/MP0601_GetUserSetup_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP0602_AddUserSetup_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP0603_SyncUserSetup_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP0604_DeleteUserSetup_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP0612_AddPartsAssociated_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP0614_DeletePartsAssociated_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6001_AddDocument_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6002_GetDocument_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6003_SyncDocument_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6004_DeleteDocument_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0301_AddAssetEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0302_GetAssetEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0303_SyncAssetEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0304_DeleteAssetEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0306_AddPositionEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0307_GetPositionEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0308_SyncPositionEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0309_DeletePositionEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0311_AddSystemEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0312_GetSystemEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0313_SyncSystemEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0314_DeleteSystemEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0317_AddLocation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0318_GetLocation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0319_SyncLocation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0327_GetAssetParentHierarchy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0328_GetPositionParentHierarchy_002.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0329_GetSystemParentHierarchy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0344_AddWarrantyCoverage_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0345_SyncWarrantyCoverage_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0347_UpdateEquipmentStructureProperties_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0356_RemoveEquipmentFromStructure_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0361_GetLocationParentHierarchy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0364_AddEquipmentPMSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0365_SyncEquipmentPMSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0366_DeleteEquipmentPMSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3014_GetEquipmentPMSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3015_GetDepreciationDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3016_GetDepreciation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3017_AddDepreciation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3018_SyncDepreciation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3019_DeleteDepreciation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3023_GetEquipLinearRef_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3024_AddEquipLinearRef_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3025_DeleteEquipLinearRef_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3026_SyncEquipLinearRef_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3057_AddEquipmentStructure_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3058_SyncEquipmentStructure_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3238_GetWarrantyCoverage_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3291_ChangeEquipmentNumber_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0108_GetComments_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0109_AddComments_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0110_SyncComments_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0111_DeleteComments_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0112_AddDocumentAssociation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0113_GetDocumentAssociation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0114_SyncDocumentAssociation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP0115_DeleteDocumentAssociation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP9501_GetCustomFields_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Base/MP9532_RunEmptyOp_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3640_AddCaseManagement_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3641_SyncCaseManagement_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3642_DeleteCaseManagement_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3643_GetCaseManagement_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3655_AddCaseManagementTask_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3656_SyncCaseManagementTask_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3657_DeleteCaseManagementTask_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/ContactCenter/MP3658_GetCaseManagementTask_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Grid/MP0116_GetGridDataOnly_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Grid/MP0118_GetGridHeaderData_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Inspection/MP1017_AddAspect_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Inspection/MP1022_AddInspectionAspect_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Inspection/MP1027_AddInspectionPoint_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Inspection/MP1031_AddInspectionAspectPoint_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0220_AddIssueReturnTransaction_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0240_AddPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0241_GetPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0242_SyncPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0243_DeletePart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0248_AddBinStock_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0249_SyncBinStock_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0250_GetBinStock_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0254_GetPartStores_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0255_AddPartStores_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0256_SyncPartStores_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0261_AddPartManufacturer_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0262_SyncPartManufacturer_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0263_DeletePartManufacturer_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0264_GetPartManufacturer_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0271_AddCatalogue_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0281_AddStoreBin_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2051_AddSubstitutePart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2072_ChangePartNumber_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2227_AddKitTemplate_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2231_CreateKitSession_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}//Material/MP2235_CreateKit_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2238_SyncKitSessionPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Project/MP5039_AddCampaignEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Purchase/MP0413_GetPurchaseOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Purchase/MP0414_AddPurchaseOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Purchase/MP0415_SyncPurchaseOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0010_AddWorkRequest_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0011_SyncWorkRequest_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0012_GetWorkRequest_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0023_AddWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0024_GetWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0025_SyncWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0035_GetActivity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0037_AddActivity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0038_SyncActivity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0042_AddLaborBooking_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0044_AddMeterReading_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0055_DeleteWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0060_AddMaterialList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0067_AddMaterialListPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0071_AddWorkOrderPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0080_AddTask_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7006_DeletePMScheduleEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7037_GetEmployee_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7038_AddEmployee_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7039_SyncEmployee_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7040_DeleteEmployee_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7082_GetStandardWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7153_AddRouteEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7156_DeleteRouteEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7161_ChangeWorkOrderStatus_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7177_AddInspectionsForWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7181_SyncInspectionsForWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7593_AddWorkOrderAdditionalCosts_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7913_SyncWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7914_GetWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7915_GetTaskChecklist_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7916_AddTaskChecklist_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7917_SyncTaskChecklist_001.wsdl</wsdlUrl>
+              </wsdlUrls>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Merge all generated classes into one -->
+      <plugin>
+        <groupId>ch.cern.eam</groupId>
+        <artifactId>javamerger-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>merge</goal>
+            </goals>
+            <configuration>
+              <sourceFiles>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0601_getusersetup_001/GetUserSetupPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0602_addusersetup_001/AddUserSetupPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0603_syncusersetup_001/SyncUserSetupPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0604_deleteusersetup_001/DeleteUserSetupPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0612_addpartsassociated_001/AddPartsAssociatedPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0614_deletepartsassociated_001/DeletePartsAssociatedPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6001_adddocument_001/AddDocumentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6002_getdocument_001/GetDocumentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6003_syncdocument_001/SyncDocumentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6004_deletedocument_001/DeleteDocumentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0301_addassetequipment_001/AddAssetEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0302_getassetequipment_001/GetAssetEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0303_syncassetequipment_001/SyncAssetEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0304_deleteassetequipment_001/DeleteAssetEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0306_addpositionequipment_001/AddPositionEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0307_getpositionequipment_001/GetPositionEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0308_syncpositionequipment_001/SyncPositionEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0309_deletepositionequipment_001/DeletePositionEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0311_addsystemequipment_001/AddSystemEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0312_getsystemequipment_001/GetSystemEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0313_syncsystemequipment_001/SyncSystemEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0314_deletesystemequipment_001/DeleteSystemEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0317_addlocation_001/AddLocationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0318_getlocation_001/GetLocationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0319_synclocation_001/SyncLocationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0327_getassetparenthierarchy_001/GetAssetParentHierarchyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0328_getpositionparenthierarchy_002/GetPositionParentHierarchyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0329_getsystemparenthierarchy_001/GetSystemParentHierarchyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0344_addwarrantycoverage_001/AddWarrantyCoveragePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0345_syncwarrantycoverage_001/SyncWarrantyCoveragePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0347_updateequipmentstructureproperties_001/UpdateEquipmentStructurePropertiesPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0356_removeequipmentfromstructure_001/RemoveEquipmentFromStructurePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0361_getlocationparenthierarchy_001/GetLocationParentHierarchyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0364_addequipmentpmschedule_001/AddEquipmentPMSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0365_syncequipmentpmschedule_001/SyncEquipmentPMSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0366_deleteequipmentpmschedule_001/DeleteEquipmentPMSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3014_getequipmentpmschedule_001/GetEquipmentPMSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3015_getdepreciationdefault_001/GetDepreciationDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3016_getdepreciation_001/GetDepreciationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3017_adddepreciation_001/AddDepreciationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3018_syncdepreciation_001/SyncDepreciationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3019_deletedepreciation_001/DeleteDepreciationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3023_getequiplinearref_001/GetEquipLinearRefPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3024_addequiplinearref_001/AddEquipLinearRefPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3025_deleteequiplinearref_001/DeleteEquipLinearRefPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3026_syncequiplinearref_001/SyncEquipLinearRefPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3057_addequipmentstructure_001/AddEquipmentStructurePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3058_syncequipmentstructure_001/SyncEquipmentStructurePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3238_getwarrantycoverage_001/GetWarrantyCoveragePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3291_changeequipmentnumber_001/ChangeEquipmentNumberPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0108_getcomments_001/GetCommentsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0109_addcomments_001/AddCommentsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0110_synccomments_001/SyncCommentsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0111_deletecomments_001/DeleteCommentsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0112_adddocumentassociation_001/AddDocumentAssociationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0113_getdocumentassociation_001/GetDocumentAssociationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0114_syncdocumentassociation_001/SyncDocumentAssociationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0115_deletedocumentassociation_001/DeleteDocumentAssociationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9501_getcustomfields_001/GetCustomFieldsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9532_runemptyop_001/RunEmptyOpPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3640_addcasemanagement_001/AddCaseManagementPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3641_synccasemanagement_001/SyncCaseManagementPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3642_deletecasemanagement_001/DeleteCaseManagementPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3643_getcasemanagement_001/GetCaseManagementPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3655_addcasemanagementtask_001/AddCaseManagementTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3656_synccasemanagementtask_001/SyncCaseManagementTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3657_deletecasemanagementtask_001/DeleteCaseManagementTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3658_getcasemanagementtask_001/GetCaseManagementTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0116_getgriddataonly_001/GetGridDataOnlyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0118_getgridheaderdata_001/GetGridHeaderDataPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1017_addaspect_001/AddAspectPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1022_addinspectionaspect_001/AddInspectionAspectPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1027_addinspectionpoint_001/AddInspectionPointPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1031_addinspectionaspectpoint_001/AddInspectionAspectPointPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0220_addissuereturntransaction_001/AddIssueReturnTransactionPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0240_addpart_001/AddPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0241_getpart_001/GetPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0242_syncpart_001/SyncPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0243_deletepart_001/DeletePartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0248_addbinstock_001/AddBinStockPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0249_syncbinstock_001/SyncBinStockPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0250_getbinstock_001/GetBinStockPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0254_getpartstores_001/GetPartStoresPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0255_addpartstores_001/AddPartStoresPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0256_syncpartstores_001/SyncPartStoresPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0261_addpartmanufacturer_001/AddPartManufacturerPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0262_syncpartmanufacturer_001/SyncPartManufacturerPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0263_deletepartmanufacturer_001/DeletePartManufacturerPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0264_getpartmanufacturer_001/GetPartManufacturerPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0271_addcatalogue_001/AddCataloguePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0281_addstorebin_001/AddStoreBinPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2051_addsubstitutepart_001/AddSubstitutePartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2072_changepartnumber_001/ChangePartNumberPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2227_addkittemplate_001/AddKitTemplatePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2231_createkitsession_001/CreateKitSessionPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2235_createkit_001/CreateKitPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2238_synckitsessionpart_001/SyncKitSessionPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5039_addcampaignequipment_001/AddCampaignEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0413_getpurchaseorder_001/GetPurchaseOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0414_addpurchaseorder_001/AddPurchaseOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0415_syncpurchaseorder_001/SyncPurchaseOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0010_addworkrequest_001/AddWorkRequestPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0011_syncworkrequest_001/SyncWorkRequestPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0012_getworkrequest_001/GetWorkRequestPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0023_addworkorder_001/AddWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0024_getworkorder_001/GetWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0025_syncworkorder_001/SyncWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0035_getactivity_001/GetActivityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0037_addactivity_001/AddActivityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0038_syncactivity_001/SyncActivityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0042_addlaborbooking_001/AddLaborBookingPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0044_addmeterreading_001/AddMeterReadingPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0055_deleteworkorder_001/DeleteWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0060_addmateriallist_001/AddMaterialListPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0067_addmateriallistpart_001/AddMaterialListPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0071_addworkorderpart_001/AddWorkOrderPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0080_addtask_001/AddTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7006_deletepmscheduleequipment_001/DeletePMScheduleEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7037_getemployee_001/GetEmployeePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7038_addemployee_001/AddEmployeePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7039_syncemployee_001/SyncEmployeePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7040_deleteemployee_001/DeleteEmployeePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7082_getstandardworkorder_001/GetStandardWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7153_addrouteequipment_001/AddRouteEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7156_deleterouteequipment_001/DeleteRouteEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7161_changeworkorderstatus_001/ChangeWorkOrderStatusPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7177_addinspectionsforworkorder_001/AddInspectionsForWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7181_syncinspectionsforworkorder_001/SyncInspectionsForWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7593_addworkorderadditionalcosts_001/AddWorkOrderAdditionalCostsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7913_syncworkorderactivitychecklist_001/SyncWorkOrderActivityCheckListPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7914_getworkorderactivitychecklist_001/GetWorkOrderActivityCheckListPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7915_gettaskchecklist_001/GetTaskChecklistPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7916_addtaskchecklist_001/AddTaskChecklistPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7917_synctaskchecklist_001/SyncTaskChecklistPT.java</sourceFile>
+              </sourceFiles>
+              <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
+              <classAnnotations>
+                <classAnnotation>@WebService(name = "InforWS", targetNamespace = "http://wsdls.datastream.net/WS")</classAnnotation>
+                <classAnnotation>@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)</classAnnotation>
+              </classAnnotations>
+              <additionalImports>
+                <additionalImport>import javax.jws.WebService;</additionalImport>
+                <additionalImport>import javax.jws.soap.SOAPBinding;</additionalImport>
+              </additionalImports>
+              <className>InforWebServicesPT</className>
+              <type>interface</type>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>3.0.1</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.0.1</version>
+            <configuration>
+              <excludePackageNames>net.datastream.*:org.openapplications.*:org.xmlsoap.*</excludePackageNames>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <configuration>
+                  <keyname>gpg-cern-eam</keyname>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>
