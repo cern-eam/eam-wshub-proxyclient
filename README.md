@@ -66,6 +66,14 @@ public class UpdateWorkOrderExample {
         unt.setUsername(un);
         securityHeader.getAny().add(unt);
         
+        // Creation of MessageConfig element that can be added to the request to tell the
+        // server to omit the InformationAlert and WarningAlert elements from the response.
+        MessageConfigType messageConfigType = new MessageConfigType();
+        MessageItemConfigType returnAlertsMessageItemConfigType = new MessageItemConfigType();
+        returnAlertsMessageItemConfigType.setName("returnAlerts");
+        returnAlertsMessageItemConfigType.setValue("false");
+        messageConfigType.getConfigItem().add(returnAlertsMessageItemConfigType);
+        
         // Creation of GetWorkOrder object
         MP0024_GetWorkOrder_001 getWorkOrderRequest = new MP0024_GetWorkOrder_001();
         WOID_Type woid = new WOID_Type();
@@ -82,7 +90,7 @@ public class UpdateWorkOrderExample {
                 securityHeader,
                 sessionScenario,
                 null,
-                null,
+                messageConfigType,
                 tenant
         );
         WorkOrder workOrder = getWorkOrderResult.getResultData().getWorkOrder();
@@ -99,7 +107,7 @@ public class UpdateWorkOrderExample {
                 securityHeader,
                 sessionScenario,
                 null,
-                null,
+                messageConfigType,
                 tenant);
         
     }
