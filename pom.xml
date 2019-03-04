@@ -21,7 +21,7 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-  <version>11.4-1-SNAPSHOT</version>
+  <version>11.4-2-SNAPSHOT</version>
 
   <name>EAM WS Hub Proxy Client</name>
   <description>JAX-WS client stubs generated from Infor EAM Web Services Toolkit WSDLs.</description>
@@ -295,6 +295,7 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7915_GetTaskChecklist_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7916_AddTaskChecklist_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7917_SyncTaskChecklist_001.wsdl</wsdlUrl>
+		<wsdlUrl>${infor.wsdls}/Work/MP8000_CreateFollowUpWorkOrder_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -447,6 +448,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7915_gettaskchecklist_001/GetTaskChecklistPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7916_addtaskchecklist_001/AddTaskChecklistPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7917_synctaskchecklist_001/SyncTaskChecklistPT.java</sourceFile>
+		<sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp8000_createfollowupworkorder_001/CreateFollowUpWorkOrderPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
