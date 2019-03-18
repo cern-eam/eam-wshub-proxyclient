@@ -18,7 +18,7 @@ The generated JAX-WS client is published as an artifact in Maven Central:
 <dependency>
     <groupId>ch.cern.eam</groupId>
     <artifactId>eam-wshub-proxyclient</artifactId>
-    <version>11.4-0</version>
+    <version>11.4-1</version>
 </dependency>
 ```
 
