@@ -21,10 +21,10 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-  <version>11.4-2-SNAPSHOT</version>
+  <version>11.4-2</version>
 
   <name>EAM WS Hub Proxy Client</name>
-  <description>JAX-WS client stubs generated from Infor EAM Web Services Toolkit WSDLs.</description>
+  <description>JAX-WS aisws aisws generated from Infor EAM Web Services Toolkit WSDLs.</description>
   <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
 
   <properties>
@@ -98,12 +98,12 @@
 
   <distributionManagement>
     <repository>
-      <id>maven-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      <id>eis</id>
+      <url>https://edmstools.cern.ch/nexus/content/repositories/ase-eds-releases</url>
     </repository>
     <snapshotRepository>
-      <id>maven-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <id>eis</id>
+      <url>https://edmstools.cern.ch/nexus/content/repositories/ase-eds-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -131,17 +131,6 @@
         </configuration>
       </plugin>
 
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>oss-cern-eam</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>false</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -175,17 +164,22 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP0302_GetAssetEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0303_SyncAssetEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0304_DeleteAssetEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0305_GetAssetEquipmentDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0306_AddPositionEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0307_GetPositionEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0308_SyncPositionEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0309_DeletePositionEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0310_GetPositionEquipmentDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0311_AddSystemEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0312_GetSystemEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0313_SyncSystemEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0314_DeleteSystemEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0315_GetSystemEquipmentDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0317_AddLocation_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0318_GetLocation_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0319_SyncLocation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0320_DeleteLocation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0321_GetLocationDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0327_GetAssetParentHierarchy_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0328_GetPositionParentHierarchy_002.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0329_GetSystemParentHierarchy_001.wsdl</wsdlUrl>
@@ -240,6 +234,7 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP0241_GetPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0242_SyncPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0243_DeletePart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0244_GetPartDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0248_AddBinStock_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0249_SyncBinStock_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0250_GetBinStock_001.wsdl</wsdlUrl>
@@ -268,6 +263,7 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP0023_AddWorkOrder_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0024_GetWorkOrder_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0025_SyncWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0026_GetWorkOrderDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0035_GetActivity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0037_AddActivity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0038_SyncActivity_001.wsdl</wsdlUrl>
@@ -296,6 +292,12 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7916_AddTaskChecklist_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7917_SyncTaskChecklist_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP8000_CreateFollowUpWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0296_AddPickList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0297_SyncPickList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1223_AddPickListPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1224_SyncPickListPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1225_DeletePickListPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0211_GetPickList_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -328,17 +330,22 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0302_getassetequipment_001/GetAssetEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0303_syncassetequipment_001/SyncAssetEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0304_deleteassetequipment_001/DeleteAssetEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0305_getassetequipmentdefault_001/GetAssetEquipmentDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0306_addpositionequipment_001/AddPositionEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0307_getpositionequipment_001/GetPositionEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0308_syncpositionequipment_001/SyncPositionEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0309_deletepositionequipment_001/DeletePositionEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0310_getpositionequipmentdefault_001/GetPositionEquipmentDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0311_addsystemequipment_001/AddSystemEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0312_getsystemequipment_001/GetSystemEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0313_syncsystemequipment_001/SyncSystemEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0314_deletesystemequipment_001/DeleteSystemEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0315_getsystemequipmentdefault_001/GetSystemEquipmentDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0317_addlocation_001/AddLocationPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0318_getlocation_001/GetLocationPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0319_synclocation_001/SyncLocationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0320_deletelocation_001/DeleteLocationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0321_getlocationdefault_001/GetLocationDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0327_getassetparenthierarchy_001/GetAssetParentHierarchyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0328_getpositionparenthierarchy_002/GetPositionParentHierarchyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0329_getsystemparenthierarchy_001/GetSystemParentHierarchyPT.java</sourceFile>
@@ -393,6 +400,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0241_getpart_001/GetPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0242_syncpart_001/SyncPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0243_deletepart_001/DeletePartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0244_getpartdefault_001/GetPartDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0248_addbinstock_001/AddBinStockPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0249_syncbinstock_001/SyncBinStockPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0250_getbinstock_001/GetBinStockPT.java</sourceFile>
@@ -421,6 +429,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0023_addworkorder_001/AddWorkOrderPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0024_getworkorder_001/GetWorkOrderPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0025_syncworkorder_001/SyncWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0026_getworkorderdefault_001/GetWorkOrderDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0035_getactivity_001/GetActivityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0037_addactivity_001/AddActivityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0038_syncactivity_001/SyncActivityPT.java</sourceFile>
@@ -449,6 +458,12 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7916_addtaskchecklist_001/AddTaskChecklistPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7917_synctaskchecklist_001/SyncTaskChecklistPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp8000_createfollowupworkorder_001/CreateFollowUpWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0296_addpicklist_001/AddPickListPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0297_syncpicklist_001/SyncPickListPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1223_addpicklistpart_001/AddPickListPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1224_syncpicklistpart_001/SyncPickListPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1225_deletepicklistpart_001/DeletePickListPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0211_getpicklist_001/GetPickListPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>

@@ -1,8 +1,8 @@
 # EAM WSHub Proxy Client
-This project contains the Maven configuration that generates JAX-WS client stubs from Infor EAM WSDLs,
+This project contains the Maven configuration that generates JAX-WS aisws aisws from Infor EAM WSDLs,
 using the JAX-WS Maven Plugin.
 
-The API of the generated JAX-WS client is quite verbose. This is why we have created another project, 
+The API of the generated JAX-WS aisws is quite verbose. This is why we have created another project, 
 [EAM WSHub Core](https://github.com/cern-eam/eam-wshub-core), that simplify the way you can call Infor EAM from Java.
 
 Only the most commonly used Infor WSDLs are currently taken into consideration. This list of WSDLs is defined inside pom.xml and can be extended if required.
@@ -13,7 +13,7 @@ and is not recommended to be used directly. Instead, the proposed way to call In
  - **from other languages: [EAM WSHub](https://github.com/cern-eam/eam-wshub)**
 
 ## Installation
-The generated JAX-WS client is published as an artifact in Maven Central:
+The generated JAX-WS aisws is published as an artifact in Maven Central:
 ```
 <dependency>
     <groupId>ch.cern.eam</groupId>
