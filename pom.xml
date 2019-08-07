@@ -288,6 +288,7 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP0035_GetActivity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0037_AddActivity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0038_SyncActivity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0039_DeleteActivity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0042_AddLaborBooking_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0044_AddMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0055_DeleteWorkOrder_001.wsdl</wsdlUrl>
@@ -465,6 +466,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0035_getactivity_001/GetActivityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0037_addactivity_001/AddActivityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0038_syncactivity_001/SyncActivityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0039_deleteactivity_001/DeleteActivityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0042_addlaborbooking_001/AddLaborBookingPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0044_addmeterreading_001/AddMeterReadingPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0055_deleteworkorder_001/DeleteWorkOrderPT.java</sourceFile>
