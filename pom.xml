@@ -160,6 +160,11 @@
                 <bindingFile>${project.basedir}/custombindings.xml</bindingFile>
               </bindingFiles>
               <wsdlUrls>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6519_GetScreenDataspy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6517_SyncScreenDataspy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6516_CopyScreenDataspy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP2258_SyncHiddenDataspy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6518_DeleteScreenDataspy_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP0601_GetUserSetup_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP0602_AddUserSetup_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP0603_SyncUserSetup_001.wsdl</wsdlUrl>
@@ -338,6 +343,11 @@
             </goals>
             <configuration>
               <sourceFiles>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6519_getscreendataspy_001/GetScreenDataspyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6517_syncscreendataspy_001/SyncScreenDataspyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6516_copyscreendataspy_001/CopyScreenDataspyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2258_synchiddendataspy_001/SyncHiddenDataspyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6518_deletescreendataspy_001/DeleteScreenDataspyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0601_getusersetup_001/GetUserSetupPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0602_addusersetup_001/AddUserSetupPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0603_syncusersetup_001/SyncUserSetupPT.java</sourceFile>
