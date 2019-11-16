@@ -228,6 +228,10 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP3235_CreateEquipmentGenerationPreview_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3251_GenerateEquipmentGeneration_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3228_GetEquipmentConfiguration_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0323_AddEquipmentCategory_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0324_GetEquipmentCategory_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0325_SyncEquipmentCategory_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP0326_DeleteEquipmentCategory_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Base/MP0108_GetComments_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Base/MP0109_AddComments_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Base/MP0110_SyncComments_001.wsdl</wsdlUrl>
@@ -263,6 +267,8 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP0250_GetBinStock_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1201_AddLot_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1202_SyncLot_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1203_DeleteLot_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1204_GetLotDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1205_GetLot_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0254_GetPartStores_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0255_AddPartStores_001.wsdl</wsdlUrl>
@@ -277,7 +283,7 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP2072_ChangePartNumber_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2227_AddKitTemplate_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2231_CreateKitSession_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}//Material/MP2235_CreateKit_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2235_CreateKit_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2238_SyncKitSessionPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Project/MP5039_AddCampaignEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Purchase/MP0413_GetPurchaseOrder_001.wsdl</wsdlUrl>
@@ -306,6 +312,9 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7038_AddEmployee_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7039_SyncEmployee_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7040_DeleteEmployee_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7079_AddStandardWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7080_SyncStandardWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7081_DeleteStandardWorkOrder_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7082_GetStandardWorkOrder_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7153_AddRouteEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7156_DeleteRouteEquipment_001.wsdl</wsdlUrl>
@@ -447,6 +456,8 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0250_getbinstock_001/GetBinStockPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1201_addlot_001/AddLotPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1202_synclot_001/SyncLotPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1203_deletelot_001/DeleteLotPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1204_getlotdefault_001/GetLotDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1205_getlot_001/GetLotPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0254_getpartstores_001/GetPartStoresPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0255_addpartstores_001/AddPartStoresPT.java</sourceFile>
@@ -490,6 +501,13 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7038_addemployee_001/AddEmployeePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7039_syncemployee_001/SyncEmployeePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7040_deleteemployee_001/DeleteEmployeePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0323_addequipmentcategory_001/AddEquipmentCategoryPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0324_getequipmentcategory_001/GetEquipmentCategoryPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0325_syncequipmentcategory_001/SyncEquipmentCategoryPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0326_deleteequipmentcategory_001/DeleteEquipmentCategoryPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7079_addstandardworkorder_001/AddStandardWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7080_syncstandardworkorder_001/SyncStandardWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7081_deletestandardworkorder_001/DeleteStandardWorkOrderPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7082_getstandardworkorder_001/GetStandardWorkOrderPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7153_addrouteequipment_001/AddRouteEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7156_deleterouteequipment_001/DeleteRouteEquipmentPT.java</sourceFile>
