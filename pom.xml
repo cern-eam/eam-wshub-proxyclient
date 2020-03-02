@@ -329,6 +329,11 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7917_SyncTaskChecklist_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP8000_CreateFollowUpWorkOrder_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7433_SyncReleasedPM_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7063_AddWorkRoute_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7064_GetWorkRoute_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7065_UpdateWorkRoute_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7066_DeleteWorkRoute_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7067_GetWorkRouteDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0296_AddPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0297_SyncPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1223_AddPickListPart_001.wsdl</wsdlUrl>
@@ -522,6 +527,11 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7917_synctaskchecklist_001/SyncTaskChecklistPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp8000_createfollowupworkorder_001/CreateFollowUpWorkOrderPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7433_syncreleasedpm_001/SyncReleasedPMPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7063_addworkroute_001/AddWorkRoutePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7064_getworkroute_001/GetWorkRoutePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7065_updateworkroute_001/UpdateWorkRoutePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7066_deleteworkroute_001/DeleteWorkRoutePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7067_getworkroutedefault_001/GetWorkRouteDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0296_addpicklist_001/AddPickListPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0297_syncpicklist_001/SyncPickListPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1223_addpicklistpart_001/AddPickListPartPT.java</sourceFile>
