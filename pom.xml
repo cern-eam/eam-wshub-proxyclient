@@ -175,6 +175,11 @@
                 <wsdlUrl>${infor.wsdls}/Administration/MP6002_GetDocument_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6003_SyncDocument_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6004_DeleteDocument_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6005_GetExtMenusHierarchy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6043_AddExtMenus_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6044_SyncExtMenus_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6045_DeleteExtMenus_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6215_SyncExtMenusHierarchy_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0301_AddAssetEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0302_GetAssetEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0303_SyncAssetEquipment_001.wsdl</wsdlUrl>
@@ -538,6 +543,11 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1224_syncpicklistpart_001/SyncPickListPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1225_deletepicklistpart_001/DeletePickListPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0211_getpicklist_001/GetPickListPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6005_getextmenushierarchy_001/GetExtMenusHierarchyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6043_addextmenus_001/AddExtMenusPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6044_syncextmenus_001/SyncExtMenusPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6045_deleteextmenus_001/DeleteExtMenusPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6215_syncextmenushierarchy_001/SyncExtMenusHierarchyPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
