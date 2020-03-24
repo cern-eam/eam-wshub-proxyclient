@@ -284,6 +284,7 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP0264_GetPartManufacturer_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0271_AddCatalogue_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0281_AddStoreBin_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0286_Bin2BinTransfer_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2051_AddSubstitutePart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2072_ChangePartNumber_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2227_AddKitTemplate_001.wsdl</wsdlUrl>
