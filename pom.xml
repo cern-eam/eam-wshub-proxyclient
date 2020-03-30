@@ -352,7 +352,7 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP2244_GetPhysicalInventoryLine_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1220_GetInventoryTransaction_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1219_GetInventoryTransactionDefault_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Material/MP1221_RefreshInventoryTransaction_001</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1221_RefreshInventoryTransaction_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
