@@ -346,6 +346,13 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP1224_SyncPickListPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1225_DeletePickListPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0211_GetPickList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1217_AddInventoryTransaction_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1294_SyncPhysicalInventoryLine_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1218_SyncInventoryTransaction_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2244_GetPhysicalInventoryLine_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1220_GetInventoryTransaction_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1219_GetInventoryTransactionDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1221_RefreshInventoryTransaction_001</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -550,6 +557,13 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6045_deleteextmenus_001/DeleteExtMenusPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6215_syncextmenushierarchy_001/SyncExtMenusHierarchyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0286_bin2bintransfer_001/Bin2BinTransferPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1217_addinventorytransaction_001/AddInventoryTransactionPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1294_syncphysicalinventoryline_001/SyncPhysicalInventoryLinePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1218_syncinventorytransaction_001/SyncInventoryTransactionPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2244_getphysicalinventoryline_001/GetPhysicalInventoryLinePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1220_getinventorytransaction_001/GetInventoryTransactionPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1219_getinventorytransactiondefault_001/GetInventoryTransactionDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1221_refreshinventorytransaction_001/RefreshInventoryTransactionPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
