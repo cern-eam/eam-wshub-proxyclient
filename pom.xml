@@ -284,6 +284,9 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP0264_GetPartManufacturer_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0271_AddCatalogue_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0281_AddStoreBin_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0282_GetStoreBin_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0283_SyncStoreBin_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP0284_DeleteStoreBin_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0286_Bin2BinTransfer_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2051_AddSubstitutePart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP2072_ChangePartNumber_001.wsdl</wsdlUrl>
@@ -486,6 +489,9 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0264_getpartmanufacturer_001/GetPartManufacturerPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0271_addcatalogue_001/AddCataloguePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0281_addstorebin_001/AddStoreBinPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0282_getstorebin_001/GetStoreBinPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0283_syncstorebin_001/SyncStoreBinPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0284_deletestorebin_001/DeleteStoreBinPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2051_addsubstitutepart_001/AddSubstitutePartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2072_changepartnumber_001/ChangePartNumberPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2227_addkittemplate_001/AddKitTemplatePT.java</sourceFile>
