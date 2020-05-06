@@ -577,10 +577,10 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1219_getinventorytransactiondefault_001/GetInventoryTransactionDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1221_refreshinventorytransaction_001/RefreshInventoryTransactionPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3222_getentitysafety_001/GetEntitySafetyPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/MP3221_deleteentitysafety_001/DeleteEntitySafetyPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/MP3220_syncentitysafety_001/SyncEntitySafetyPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/MP3219_addentitysafety_001/AddEntitySafetyPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/MP3218_getentitysafetydefault_001/GetEntitySafetyDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3221_deleteentitysafety_001/DeleteEntitySafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3220_syncentitysafety_001/SyncEntitySafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3219_addentitysafety_001/AddEntitySafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3218_getentitysafetydefault_001/GetEntitySafetyDefaultPT.java</sourceFile>
 
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
