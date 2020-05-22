@@ -362,6 +362,10 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP3220_SyncEntitySafety_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP3219_AddEntitySafety_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP3218_GetEntitySafetyDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7393_GetWorkOrderEquipmentDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7394_AddWorkOrderEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7395_SyncWorkOrderEquipment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7396_RemoveWorkOrderEquipment_001.wsdl</wsdlUrl>
 
               </wsdlUrls>
             </configuration>
@@ -582,6 +586,10 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3220_syncentitysafety_001/SyncEntitySafetyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3219_addentitysafety_001/AddEntitySafetyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3218_getentitysafetydefault_001/GetEntitySafetyDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7393_getworkorderequipmentdefault_001/GetWorkOrderEquipmentDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7394_addworkorderequipment_001/AddWorkOrderEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7395_syncworkorderequipment_001/SyncWorkOrderEquipmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7396_removeworkorderequipment_001/RemoveWorkOrderEquipmentPT.java</sourceFile>
 
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
