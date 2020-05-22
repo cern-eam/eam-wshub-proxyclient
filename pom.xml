@@ -21,7 +21,7 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-  <version>11.5-3-SNAPSHOT</version>
+  <version>11.5-3</version>
 
   <name>EAM WS Hub Proxy Client</name>
   <description>JAX-WS aisws aisws generated from Infor EAM Web Services Toolkit WSDLs.</description>
@@ -33,7 +33,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <infor.version>11.5</infor.version>
 <!--    /home/prellerg/HOME/software/inforEamWebServicesToolkit/Wsdl-->
-    <infor.wsdls>/home/prellerg/HOME/software/inforEamWebServicesToolkit/Wsdl</infor.wsdls>
+    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_115/Wsdl</infor.wsdls>
   </properties>
 
   <licenses>
@@ -92,7 +92,7 @@
 
   <scm>
     <connection>scm:git:ssh://git@github.com/cern-eam/eam-wshub-proxyclient.git</connection>
-    <tag>eam-wshub-proxyclient-11.4-4</tag>
+    <tag>eam-wshub-proxyclient-11.5-3</tag>
     <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
   </scm>
 
