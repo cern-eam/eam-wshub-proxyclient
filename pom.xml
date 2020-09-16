@@ -344,6 +344,7 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7065_UpdateWorkRoute_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7066_DeleteWorkRoute_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7067_GetWorkRouteDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7997_PerformWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0296_AddPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0297_SyncPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1223_AddPickListPart_001.wsdl</wsdlUrl>
@@ -590,7 +591,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7394_addworkorderequipment_001/AddWorkOrderEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7395_syncworkorderequipment_001/SyncWorkOrderEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7396_removeworkorderequipment_001/RemoveWorkOrderEquipmentPT.java</sourceFile>
-
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7997_performworkorderactivitychecklist_001/PerformWorkOrderActivityCheckListPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
