@@ -21,7 +21,7 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-  <version>11.5-5</version>
+  <version>11.5-5-SNAPSHOT</version>
 
   <name>EAM WS Hub Proxy Client</name>
   <description>JAX-WS aisws aisws generated from Infor EAM Web Services Toolkit WSDLs.</description>
@@ -33,9 +33,9 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <infor.version>11.5</infor.version>
 <!--    /Users/lpater/Documents/Infor/web_services_115/Wsdl-->
-<!--    /Users/bborisov/Downloads/web_services_115.tar/web_services_115/Wsdl-->
+<!--    -->
 <!--    /home/prellerg/HOME/software/inforEamWebServicesToolkit/Wsdl-->
-    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_115/Wsdl</infor.wsdls>
+    <infor.wsdls>/Users/bborisov/Downloads/web_services_115.tar/web_services_115/Wsdl</infor.wsdls>
   </properties>
 
   <licenses>
@@ -94,7 +94,7 @@
 
   <scm>
     <connection>scm:git:ssh://git@github.com/cern-eam/eam-wshub-proxyclient.git</connection>
-    <tag>eam-wshub-proxyclient-11.5-5</tag>
+    <tag>eam-wshub-proxyclient-11.4-4</tag>
     <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
   </scm>
 
@@ -318,27 +318,11 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP0060_AddMaterialList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0067_AddMaterialListPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0071_AddWorkOrderPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0078_GetTaskDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0079_GetTask_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0080_AddTask_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3272_GetTaskPlanJobDefault_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3273_GetTaskPlanJob_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3274_AddTaskPlanJob_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3275_SyncTaskPlanJob_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3276_DeleteTaskPlanJob_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3284_GetTaskPlanTool_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3285_AddTaskPlanTool_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3286_SyncTaskPlanTool_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3287_DeleteTaskPlanTool_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP3288_GetTaskPlanToolDefault_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5712_AddTaskPlanLabor_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5713_SyncTaskPlanLabor_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5714_DeleteTaskPlanLabor_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5715_GetTaskPlanLabor_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5716_GetTaskPlanLaborDefault_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5717_GetTaskPlanPart_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5718_AddTaskPlanPart_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5719_SyncTaskPlanPart_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5720_DeleteTaskPlanPart_001.wsdl</wsdlUrl>
-                <wsdlUrl>${infor.wsdls}/Work/MP5721_GetTaskPlanPartDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0081_SyncTask_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0082_DeleteTask_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7006_DeletePMScheduleEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7037_GetEmployee_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7038_AddEmployee_001.wsdl</wsdlUrl>
@@ -615,27 +599,11 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7395_syncworkorderequipment_001/SyncWorkOrderEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7396_removeworkorderequipment_001/RemoveWorkOrderEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7997_performworkorderactivitychecklist_001/PerformWorkOrderActivityCheckListPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3272_gettaskplanjobdefault_001/GetTaskPlanJobDefaultPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3273_gettaskplanjob_001/GetTaskPlanJobPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3274_addtaskplanjob_001/AddTaskPlanJobPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3275_synctaskplanjob_001/SyncTaskPlanJobPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3276_deletetaskplanjob_001/DeleteTaskPlanJobPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3284_gettaskplantool_001/GetTaskPlanToolPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3285_addtaskplantool_001/AddTaskPlanToolPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3286_synctaskplantool_001/SyncTaskPlanToolPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3287_deletetaskplantool_001/DeleteTaskPlanToolPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3288_gettaskplantooldefault_001/GetTaskPlanToolDefaultPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5712_addtaskplanlabor_001/AddTaskPlanLaborPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5713_synctaskplanlabor_001/SyncTaskPlanLaborPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5714_deletetaskplanlabor_001/DeleteTaskPlanLaborPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5715_gettaskplanlabor_001/GetTaskPlanLaborPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5716_gettaskplanlabordefault_001/GetTaskPlanLaborDefaultPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5717_gettaskplanpart_001/GetTaskPlanPartPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5718_addtaskplanpart_001/AddTaskPlanPartPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5719_synctaskplanpart_001/SyncTaskPlanPartPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5720_deletetaskplanpart_001/DeleteTaskPlanPartPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5721_gettaskplanpartdefault_001/GetTaskPlanPartDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7998_reviewworkorderactivitychecklist_001/ReviewWorkOrderActivityChecklistPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0081_synctask_001/SyncTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0079_gettask_001/GetTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0082_deletetask_001/DeleteTaskPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0078_gettaskdefault_001/GetTaskDefaultPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
