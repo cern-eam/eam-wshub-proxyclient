@@ -35,7 +35,7 @@
 <!--    /Users/lpater/Documents/Infor/web_services_115/Wsdl-->
 <!--    -->
 <!--    /home/prellerg/HOME/software/inforEamWebServicesToolkit/Wsdl-->
-    <infor.wsdls>/Users/bborisov/Downloads/web_services_115.tar/web_services_115/Wsdl</infor.wsdls>
+    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_115/Wsdl</infor.wsdls>
   </properties>
 
   <licenses>
