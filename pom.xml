@@ -21,7 +21,7 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-  <version>11.5-5-SNAPSHOT</version>
+  <version>11.5-5</version>
 
   <name>EAM WS Hub Proxy Client</name>
   <description>JAX-WS aisws aisws generated from Infor EAM Web Services Toolkit WSDLs.</description>
@@ -352,6 +352,7 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7067_GetWorkRouteDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7997_PerformWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7998_ReviewWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7999_GetWorkOrderActivityCheckListDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0296_AddPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0297_SyncPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1223_AddPickListPart_001.wsdl</wsdlUrl>
@@ -604,6 +605,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0079_gettask_001/GetTaskPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0082_deletetask_001/DeleteTaskPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0078_gettaskdefault_001/GetTaskDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7999_getworkorderactivitychecklistdefault_001/GetWorkOrderActivityCheckListDefaultPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
