@@ -21,11 +21,7 @@
   <groupId>ch.cern.eam</groupId>
   <artifactId>eam-wshub-proxyclient</artifactId>
   <packaging>jar</packaging>
-<<<<<<< HEAD
-  <version>11.5-5</version>
-=======
   <version>11.5-6-SNAPSHOT</version>
->>>>>>> b1734c81ca57d68cd65a022164c5d5557cd35105
 
   <name>EAM WS Hub Proxy Client</name>
   <description>JAX-WS aisws aisws generated from Infor EAM Web Services Toolkit WSDLs.</description>
