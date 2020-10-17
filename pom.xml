@@ -353,6 +353,11 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7997_PerformWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7998_ReviewWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7999_GetWorkOrderActivityCheckListDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7877_GetCustomerContractSalesPriceDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7876_DeleteCustomerContractSalesPrice_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7875_SyncCustomerContractSalesPrice_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7874_AddCustomerContractSalesPrice_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7873_GetCustomerContractSalesPrice_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0296_AddPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0297_SyncPickList_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1223_AddPickListPart_001.wsdl</wsdlUrl>
@@ -606,6 +611,11 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0082_deletetask_001/DeleteTaskPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0078_gettaskdefault_001/GetTaskDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7999_getworkorderactivitychecklistdefault_001/GetWorkOrderActivityCheckListDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7877_getcustomercontractsalespricedefault_001/GetCustomerContractSalesPriceDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7876_deletecustomercontractsalesprice_001/DeleteCustomerContractSalesPricePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7875_synccustomercontractsalesprice_001/SyncCustomerContractSalesPricePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7874_addcustomercontractsalesprice_001/AddCustomerContractSalesPricePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7873_getcustomercontractsalesprice_001/GetCustomerContractSalesPricePT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
