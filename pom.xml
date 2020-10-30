@@ -380,7 +380,12 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7394_AddWorkOrderEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7395_SyncWorkOrderEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7396_RemoveWorkOrderEquipment_001.wsdl</wsdlUrl>
-
+                <wsdlUrl>${infor.wsdls}/Work/MP7982_GetWorkSafetyDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7983_GetWorkSafety_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7984_AddWorkSafety_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7985_SyncWorkSafety_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7986_DeleteWorkSafety_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7987_ReviewWorkSafety_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -616,6 +621,12 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7875_synccustomercontractsalesprice_001/SyncCustomerContractSalesPricePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7874_addcustomercontractsalesprice_001/AddCustomerContractSalesPricePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7873_getcustomercontractsalesprice_001/GetCustomerContractSalesPricePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7982_getworksafetydefault_001/GetWorkSafetyDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7983_getworksafety_001/GetWorkSafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7984_addworksafety_001/AddWorkSafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7985_syncworksafety_001/SyncWorkSafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7986_deleteworksafety_001/DeleteWorkSafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7987_reviewworksafety_001/ReviewWorkSafetyPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
