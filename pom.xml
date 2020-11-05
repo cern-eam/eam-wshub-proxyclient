@@ -610,7 +610,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7395_syncworkorderequipment_001/SyncWorkOrderEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7396_removeworkorderequipment_001/RemoveWorkOrderEquipmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7997_performworkorderactivitychecklist_001/PerformWorkOrderActivityCheckListPT.java</sourceFile>
-                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7998_reviewworkorderactivitychecklist_001/ReviewWorkOrderActivityChecklistPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7998_reviewworkorderactivitychecklist_001/ReviewWorkOrderActivityCheckListPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0081_synctask_001/SyncTaskPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0079_gettask_001/GetTaskPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0082_deletetask_001/DeleteTaskPT.java</sourceFile>
