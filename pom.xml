@@ -35,7 +35,7 @@
 <!--    /Users/lpater/Documents/Infor/web_services_115/Wsdl-->
 <!--    -->
 <!--    /home/prellerg/HOME/software/inforEamWebServicesToolkit/Wsdl-->
-    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_115/Wsdl</infor.wsdls>
+    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_116/Wsdl</infor.wsdls>
   </properties>
 
   <licenses>
@@ -183,6 +183,7 @@
                 <wsdlUrl>${infor.wsdls}/Administration/MP6044_SyncExtMenus_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6045_DeleteExtMenus_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6215_SyncExtMenusHierarchy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6441_ProcessUserDefinedScreenService_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0301_AddAssetEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0302_GetAssetEquipment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0303_SyncAssetEquipment_001.wsdl</wsdlUrl>
@@ -627,6 +628,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7985_syncworksafety_001/SyncWorkSafetyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7986_deleteworksafety_001/DeleteWorkSafetyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7987_reviewworksafety_001/ReviewWorkSafetyPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6441_processuserdefinedscreenservice_001/ProcessUserDefinedScreenServicePT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
