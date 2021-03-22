@@ -33,9 +33,9 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <infor.version>11.5</infor.version>
 <!--    /Users/lpater/Documents/Infor/web_services_115/Wsdl-->
-<!--    -->
 <!--    /home/prellerg/HOME/software/inforEamWebServicesToolkit/Wsdl-->
-    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_116/Wsdl</infor.wsdls>
+<!--    <infor.wsdls>/Users/lpater/Documents/Infor/web_services_116/Wsdl</infor.wsdls>-->
+    <infor.wsdls>C:\Users\bborisov\Downloads\web_services_115.tar\web_services_115\Wsdl</infor.wsdls>
   </properties>
 
   <licenses>
@@ -164,6 +164,8 @@
               </bindingFiles>
               <wsdlUrls>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6519_GetScreenDataspy_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6520_AddUserSetupResponsibility_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Administration/MP6521_DeleteUserSetupResponsibility_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6517_SyncScreenDataspy_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP6516_CopyScreenDataspy_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Administration/MP2258_SyncHiddenDataspy_001.wsdl</wsdlUrl>
@@ -629,6 +631,8 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7986_deleteworksafety_001/DeleteWorkSafetyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7987_reviewworksafety_001/ReviewWorkSafetyPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6441_processuserdefinedscreenservice_001/ProcessUserDefinedScreenServicePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6520_addusersetupresponsibility_001/AddUserSetupResponsibilityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6521_deleteusersetupresponsibility_001/DeleteUserSetupResponsibilityPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
