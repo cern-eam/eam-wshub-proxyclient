@@ -237,6 +237,10 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP3235_CreateEquipmentGenerationPreview_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3251_GenerateEquipmentGeneration_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3228_GetEquipmentConfiguration_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3225_AddEquipmentConfiguration_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3224_GetEquipmentConfigurationDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3226_SyncEquipmentConfiguration_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3227_DeleteEquipmentConfiguration_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0323_AddEquipmentCategory_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0324_GetEquipmentCategory_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP0325_SyncEquipmentCategory_001.wsdl</wsdlUrl>
@@ -473,6 +477,10 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3235_createequipmentgenerationpreview_001/CreateEquipmentGenerationPreviewPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3251_generateequipmentgeneration_001/GenerateEquipmentGenerationPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3228_getequipmentconfiguration_001/GetEquipmentConfigurationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3225_addequipmentconfiguration_001/AddEquipmentConfigurationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3224_getequipmentconfigurationdefault_001/GetEquipmentConfigurationDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3226_syncequipmentconfiguration_001/SyncEquipmentConfigurationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3227_deleteequipmentconfiguration_001/DeleteEquipmentConfigurationPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0108_getcomments_001/GetCommentsPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0109_addcomments_001/AddCommentsPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0110_synccomments_001/SyncCommentsPT.java</sourceFile>
