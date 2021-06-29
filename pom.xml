@@ -391,6 +391,13 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7985_SyncWorkSafety_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7986_DeleteWorkSafety_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7987_ReviewWorkSafety_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7276_CopyStandardWorkOrder_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7746_GetStandardWOChildDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7271_GetStandardWOChild_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7275_DeleteStandardWOChild_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7273_AddStandardWOChild_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7274_SyncStandardWOChild_001.wsdl</wsdlUrl>
+
               </wsdlUrls>
             </configuration>
           </execution>
@@ -639,6 +646,13 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6441_processuserdefinedscreenservice_001/ProcessUserDefinedScreenServicePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6520_addusersetupresponsibility_001/AddUserSetupResponsibilityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp6521_deleteusersetupresponsibility_001/DeleteUserSetupResponsibilityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7276_copystandardworkorder_001/CopyStandardWorkOrderPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7746_getstandardwochilddefault_001/GetStandardWOChildDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7271_getstandardwochild_001/GetStandardWOChildPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7275_deletestandardwochild_001/DeleteStandardWOChildPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7273_addstandardwochild_001/AddStandardWOChildPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7274_syncstandardwochild_001/SyncStandardWOChildPT.java</sourceFile>
+
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
