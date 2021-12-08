@@ -397,7 +397,12 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7275_DeleteStandardWOChild_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7273_AddStandardWOChild_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7274_SyncStandardWOChild_001.wsdl</wsdlUrl>
-
+                <wsdlUrl>${infor.wsdls}/Work/MP7163_FreezeOrUnfreezeWorkOrderSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0056_GetWorkOrderScheduleDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0057_AddWorkOrderSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0058_SyncWorkOrderSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP0059_DeleteWorkOrderSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7925_GetWorkOrderSchedule_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -652,7 +657,12 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7275_deletestandardwochild_001/DeleteStandardWOChildPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7273_addstandardwochild_001/AddStandardWOChildPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7274_syncstandardwochild_001/SyncStandardWOChildPT.java</sourceFile>
-
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7163_freezeorunfreezeworkorderschedule_001/FreezeOrUnfreezeWorkOrderSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0056_getworkorderscheduledefault_001/GetWorkOrderScheduleDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0057_addworkorderschedule_001/AddWorkOrderSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0058_syncworkorderschedule_001/SyncWorkOrderSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0059_deleteworkorderschedule_001/DeleteWorkOrderSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7925_getworkorderschedule_001/GetWorkOrderSchedulePT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
