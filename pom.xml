@@ -403,6 +403,7 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP0058_SyncWorkOrderSchedule_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP0059_DeleteWorkOrderSchedule_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7925_GetWorkOrderSchedule_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7336_GetWOEquipLinearDetails_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -663,6 +664,7 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0058_syncworkorderschedule_001/SyncWorkOrderSchedulePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0059_deleteworkorderschedule_001/DeleteWorkOrderSchedulePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7925_getworkorderschedule_001/GetWorkOrderSchedulePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7336_getwoequiplineardetails_001/GetWOEquipLinearDetailsPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
