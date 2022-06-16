@@ -402,6 +402,16 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP0059_DeleteWorkOrderSchedule_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7925_GetWorkOrderSchedule_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7336_GetWOEquipLinearDetails_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7832_GetCustomerRental_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7833_AddCustomerRental_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7836_GetCustomerRentalDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7863_GetCustomerRentalAdjustment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7864_AddCustomerRentalAdjustment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7867_GetCustomerRentalAdjustmentDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7834_SyncCustomerRental_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7865_SyncCustomerRentalAdjustment_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7835_DeleteCustomerRental_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7866_DeleteCustomerRentalAdjustment_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -663,6 +673,16 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0059_deleteworkorderschedule_001/DeleteWorkOrderSchedulePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7925_getworkorderschedule_001/GetWorkOrderSchedulePT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7336_getwoequiplineardetails_001/GetWOEquipLinearDetailsPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7832_getcustomerrental_001/GetCustomerRentalPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7833_addcustomerrental_001/AddCustomerRentalPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7836_getcustomerrentaldefault_001/GetCustomerRentalDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7863_getcustomerrentaladjustment_001/GetCustomerRentalAdjustmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7864_addcustomerrentaladjustment_001/AddCustomerRentalAdjustmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7867_getcustomerrentaladjustmentdefault_001/GetCustomerRentalAdjustmentDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7834_synccustomerrental_001/SyncCustomerRentalPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7865_synccustomerrentaladjustment_001/SyncCustomerRentalAdjustmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7835_deletecustomerrental_001/DeleteCustomerRentalPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7866_deletecustomerrentaladjustment_001/DeleteCustomerRentalAdjustmentPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
