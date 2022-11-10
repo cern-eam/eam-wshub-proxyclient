@@ -412,6 +412,8 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7865_SyncCustomerRentalAdjustment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7835_DeleteCustomerRental_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7866_DeleteCustomerRentalAdjustment_001.wsdl</wsdlUrl>
+		 <wsdlUrl>${infor.wsdls}/Asset/MP9132_GetEquipmentMeterReading_001.wsdl</wsdlUrl>
+		 <wsdlUrl>${infor.wsdls}/Asset/MP9133_GetEquipmentMeterReadingDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9134_AddEquipmentMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9135_SyncEquipmentMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9136_DeleteEquipmentMeterReading_001.wsdl</wsdlUrl>
@@ -686,6 +688,8 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7865_synccustomerrentaladjustment_001/SyncCustomerRentalAdjustmentPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7835_deletecustomerrental_001/DeleteCustomerRentalPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7866_deletecustomerrentaladjustment_001/DeleteCustomerRentalAdjustmentPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9132_getequipmentmeterreading_001/GetEquipmentMeterReadingPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9133_getequipmentmeterreadingdefault_001/GetEquipmentMeterReadingDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9134_addequipmentmeterreading_001/AddEquipmentMeterReadingPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9135_syncequipmentmeterreading_001/SyncEquipmentMeterReadingPT.java</sourceFile>
 		<sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9136_deleteequipmentmeterreading_001/DeleteEquipmentMeterReadingPT.java</sourceFile>
