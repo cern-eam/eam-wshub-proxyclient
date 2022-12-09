@@ -417,6 +417,11 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP9134_AddEquipmentMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9135_SyncEquipmentMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9136_DeleteEquipmentMeterReading_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3396_GetNonconformityDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3397_AddNonconformity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3398_SyncNonconformity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3399_DeleteNonconformity_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3400_GetNonconformity_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -693,6 +698,11 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9134_addequipmentmeterreading_001/AddEquipmentMeterReadingPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9135_syncequipmentmeterreading_001/SyncEquipmentMeterReadingPT.java</sourceFile>
 		<sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9136_deleteequipmentmeterreading_001/DeleteEquipmentMeterReadingPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3396_getnonconformitydefault_001/GetNonconformityDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3397_addnonconformity_001/AddNonconformityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3398_syncnonconformity_001/SyncNonconformityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3399_deletenonconformity_001/DeleteNonconformityPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3400_getnonconformity_001/GetNonconformityPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
