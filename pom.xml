@@ -29,8 +29,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
     <infor.version>12.0</infor.version>
     <infor.wsdls>/home/lpater/Documents/infor/wstoolkit120/Wsdl</infor.wsdls>
   </properties>
@@ -85,6 +85,11 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-rt</artifactId>
+      <version>3.0.1</version>
     </dependency>
   </dependencies>
 
@@ -142,14 +147,16 @@
       </plugin>
 
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
+        <groupId>com.sun.xml.ws</groupId>
         <artifactId>jaxws-maven-plugin</artifactId>
-        <version>2.5</version>
+        <version>4.0.1</version>
         <executions>
           <execution>
             <goals>
               <goal>wsimport</goal>
             </goals>
+          </execution>
+        </executions>
             <configuration>
               <xadditionalHeaders>true</xadditionalHeaders>
               <vmArgs>
@@ -425,8 +432,6 @@
                 <wsdlUrl>${infor.wsdls}/Material/MP1287_Store2StoreTransfer_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
-          </execution>
-        </executions>
       </plugin>
 
       <!-- Merge all generated classes into one -->
@@ -712,8 +717,8 @@
                 <classAnnotation>@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)</classAnnotation>
               </classAnnotations>
               <additionalImports>
-                <additionalImport>import javax.jws.WebService;</additionalImport>
-                <additionalImport>import javax.jws.soap.SOAPBinding;</additionalImport>
+                <additionalImport>import jakarta.jws.WebService;</additionalImport>
+                <additionalImport>import jakarta.jws.soap.SOAPBinding;</additionalImport>
               </additionalImports>
               <className>InforWebServicesPT</className>
               <type>interface</type>
