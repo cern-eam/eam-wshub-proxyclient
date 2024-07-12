@@ -1,14 +1,14 @@
 # EAM WSHub Proxy Client
-This project contains the Maven configuration that generates JAX-WS aisws aisws from Infor EAM WSDLs,
+This project contains the Maven configuration that generates JAX-WS aisws aisws from EAM WSDLs,
 using the JAX-WS Maven Plugin.
 
 The API of the generated JAX-WS aisws is quite verbose. This is why we have created another project, 
-[EAM WSHub Core](https://github.com/cern-eam/eam-wshub-core), that simplify the way you can call Infor EAM from Java.
+[EAM WSHub Core](https://github.com/cern-eam/eam-wshub-core), that simplify the way you can call EAM from Java.
 
-Only the most commonly used Infor WSDLs are currently taken into consideration. This list of WSDLs is defined inside pom.xml and can be extended if required.
+Only the most commonly used EAM WSDLs are currently taken into consideration. This list of WSDLs is defined inside pom.xml and can be extended if required.
 
 **This is a low-level library included in [EAM WSHub Core](https://github.com/cern-eam/eam-wshub-core) 
-and is not recommended to be used directly. Instead, the proposed way to call Infor EAM web services is:**
+and is not recommended to be used directly. Instead, the proposed way to call EAM web services is:**
  - **from Java: [EAM WSHub Core](https://github.com/cern-eam/eam-wshub-core)**
  - **from other languages: [EAM WSHub](https://github.com/cern-eam/eam-wshub)**
 
@@ -31,7 +31,7 @@ import net.datastream.schemas.mp_fields.WOID_Type;
 import net.datastream.schemas.mp_functions.mp0024_001.MP0024_GetWorkOrder_001;
 import net.datastream.schemas.mp_functions.mp0025_001.MP0025_SyncWorkOrder_001;
 import net.datastream.schemas.mp_results.mp0024_001.MP0024_GetWorkOrder_001_Result;
-import net.datastream.wsdls.inforws.InforWebServicesPT;
+import net.datastream.wsdls.eamws.EAMWebServicesPT;
 import org.xmlsoap.schemas.ws._2002._04.secext.*;
 import javax.xml.namespace.QName;
 import javax.xml.ws.BindingProvider;
@@ -41,7 +41,7 @@ public class UpdateWorkOrderExample {
     
     public static void main(String[] args) {
         
-        String inforEndpointUrl = "{YOUR-ENDPOINT-URL}";
+        String eamEndpointUrl = "{YOUR-ENDPOINT-URL}";
         String organizationCode = "{YOUR-ORGANIZATION-CODE}";
         String tenant = "{YOUR-TENANT}";
         String username = "{YOUR-USERNAME}";
@@ -49,10 +49,10 @@ public class UpdateWorkOrderExample {
         String workOrderNumber = "{YOUR-WORKORDER-NUMBER}";
         String sessionScenario = "TERMINATE";
         
-        // Get InforWebServicesPT instance
-        Service service = Service.create(new QName("inforws"));
-        InforWebServicesPT inforWebServicesToolkitClient = service.getPort(InforWebServicesPT.class);
-        ((BindingProvider) inforWebServicesToolkitClient).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, inforEndpointUrl);
+        // Get EAMWebServicesPT instance
+        Service service = Service.create(new QName("eamws"));
+        EAMWebServicesPT eamWebServicesToolkitClient = service.getPort(EAMWebServicesPT.class);
+        ((BindingProvider) eamWebServicesToolkitClient).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, eamEndpointUrl);
         
         // Creation of security header
         ObjectFactory of = new ObjectFactory();
@@ -84,7 +84,7 @@ public class UpdateWorkOrderExample {
         getWorkOrderRequest.setWORKORDERID(woid);
         
         // Fetch workorder
-        MP0024_GetWorkOrder_001_Result getWorkOrderResult = inforWebServicesToolkitClient.getWorkOrderOp(
+        MP0024_GetWorkOrder_001_Result getWorkOrderResult = eamWebServicesToolkitClient.getWorkOrderOp(
                 getWorkOrderRequest,
                 organizationCode,
                 securityHeader,
@@ -98,10 +98,10 @@ public class UpdateWorkOrderExample {
         // Let's update the description
         workOrder.getWORKORDERID().setDESCRIPTION("New workOrder description");
         
-        // And synchronize the workorder in Infor
+        // And synchronize the workorder in EAM
         MP0025_SyncWorkOrder_001 syncWO = new MP0025_SyncWorkOrder_001();
         syncWO.setWorkOrder(workOrder);
-        inforWebServicesToolkitClient.syncWorkOrderOp(
+        eamWebServicesToolkitClient.syncWorkOrderOp(
                 syncWO,
                 organizationCode,
                 securityHeader,

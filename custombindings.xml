@@ -1,6 +1,6 @@
-<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+<jaxb:bindings xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
-               jaxb:version="2.0">
+               jaxb:version="3.0">
       <jaxb:globalBindings typesafeEnumMaxMembers="2000" underscoreBinding="asCharInWord"/>
 </jaxb:bindings>
 
