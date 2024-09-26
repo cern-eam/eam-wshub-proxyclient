@@ -412,8 +412,8 @@
                 <wsdlUrl>${infor.wsdls}/Work/MP7865_SyncCustomerRentalAdjustment_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7835_DeleteCustomerRental_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7866_DeleteCustomerRentalAdjustment_001.wsdl</wsdlUrl>
-		 <wsdlUrl>${infor.wsdls}/Asset/MP9132_GetEquipmentMeterReading_001.wsdl</wsdlUrl>
-		 <wsdlUrl>${infor.wsdls}/Asset/MP9133_GetEquipmentMeterReadingDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP9132_GetEquipmentMeterReading_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP9133_GetEquipmentMeterReadingDefault_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9134_AddEquipmentMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9135_SyncEquipmentMeterReading_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP9136_DeleteEquipmentMeterReading_001.wsdl</wsdlUrl>
@@ -423,6 +423,7 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP3399_DeleteNonconformity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3400_GetNonconformity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1287_Store2StoreTransfer_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP7927_ProcessContractTemplate_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -698,13 +699,14 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9133_getequipmentmeterreadingdefault_001/GetEquipmentMeterReadingDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9134_addequipmentmeterreading_001/AddEquipmentMeterReadingPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9135_syncequipmentmeterreading_001/SyncEquipmentMeterReadingPT.java</sourceFile>
-		<sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9136_deleteequipmentmeterreading_001/DeleteEquipmentMeterReadingPT.java</sourceFile>
+		        <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp9136_deleteequipmentmeterreading_001/DeleteEquipmentMeterReadingPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3396_getnonconformitydefault_001/GetNonconformityDefaultPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3397_addnonconformity_001/AddNonconformityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3398_syncnonconformity_001/SyncNonconformityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3399_deletenonconformity_001/DeleteNonconformityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3400_getnonconformity_001/GetNonconformityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1287_store2storetransfer_001/Store2StoreTransferPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7927_processcontracttemplate_001/ProcessContractTemplatePT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
