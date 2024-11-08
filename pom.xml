@@ -424,6 +424,11 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP3400_GetNonconformity_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP1287_Store2StoreTransfer_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Work/MP7927_ProcessContractTemplate_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3441_GetNonconformityObservationDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3442_AddNonconformityObservation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3443_SyncNonconformityObservation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3444_DeleteNonconformityObservation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Asset/MP3445_GetNonconformityObservation_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -707,6 +712,11 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3400_getnonconformity_001/GetNonconformityPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1287_store2storetransfer_001/Store2StoreTransferPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7927_processcontracttemplate_001/ProcessContractTemplatePT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3441_getnonconformityobservationdefault_001/GetNonconformityObservationDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3442_addnonconformityobservation_001/AddNonconformityObservationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3443_syncnonconformityobservation_001/SyncNonconformityObservationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3444_deletenonconformityobservation_001/DeleteNonconformityObservationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3445_getnonconformityobservation_001/GetNonconformityObservationPT.java</sourceFile>
               </sourceFiles>
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
