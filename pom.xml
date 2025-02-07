@@ -39,7 +39,7 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <eam.version>12.1</eam.version>
-        <eam.wsdls>/home/almeida/cernbox/WORK/DEVELOPMENT/EAM_WSDL/HxGN_EAM_Web_Services_Toolkit_12.1.0/wsdl</eam.wsdls>
+        <eam.wsdls>/home/ricalm/cernbox/WORK/DEVELOPMENT/EAM_WSDL/HxGN_EAM_Web_Services_Toolkit_12.1.0/wsdl</eam.wsdls>
     </properties>
 
     <dependencies>
