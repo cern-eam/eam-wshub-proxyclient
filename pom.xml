@@ -430,6 +430,7 @@
                 <wsdlUrl>${infor.wsdls}/Asset/MP3444_DeleteNonconformityObservation_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3445_GetNonconformityObservation_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Asset/MP3402_CreateNonconformityObservation_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Work/MP5782_UpdateWorkOrderActivityCheckList_001.wsdl</wsdlUrl>
               </wsdlUrls>
             </configuration>
           </execution>
@@ -719,7 +720,9 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3444_deletenonconformityobservation_001/DeleteNonconformityObservationPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3445_getnonconformityobservation_001/GetNonconformityObservationPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3402_createnonconformityobservation_001/CreateNonconformityObservationPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp5782_updateworkorderactivitychecklist_001/UpdateWorkOrderActivityCheckListPT.java</sourceFile>
               </sourceFiles>
+
               <destinationPackage>net.datastream.wsdls.inforws</destinationPackage>
               <classAnnotations>
                 <classAnnotation>@WebService(name = "InforWS", targetNamespace = "http://wsdls.datastream.net/WS")</classAnnotation>
