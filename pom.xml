@@ -31,8 +31,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <infor.version>12.1</infor.version>
-    <infor.wsdls>/home/ricalm/cernbox/WORK/DEVELOPMENT/EAM_WSDL/HxGN_EAM_Web_Services_Toolkit_12.1.0/wsdl</infor.wsdls>
+    <infor.version>12.2</infor.version>
+    <infor.wsdls>/home/ricalm/cernbox/WORK/DEVELOPMENT/EAM_WSDL/HxGN_EAM_Web_Services_Toolkit_12.2/wsdl</infor.wsdls>
   </properties>
   <licenses>
     <license>
