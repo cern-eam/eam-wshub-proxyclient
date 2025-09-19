@@ -22,9 +22,9 @@
     <artifactId>eam-wshub-proxyclient</artifactId>
     <packaging>jar</packaging>
     <version>12.1.0-22-SNAPSHOT</version>
+
     <name>EAM WS Hub Proxy Client</name>
     <description>JAX-WS stub client generated from HxGN EAM Web Services Toolkit WSDLs.</description>
-
     <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
 
     <properties>
@@ -33,29 +33,14 @@
         <jaxws-rt.version>4.0.2</jaxws-rt.version>
         <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
         <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
-        <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+        <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <eam.version>12.1</eam.version>
-        <eam.wsdls>/home/ricalm/cernbox/WORK/DEVELOPMENT/EAM_WSDL/HxGN_EAM_Web_Services_Toolkit_12.1.0/wsdl</eam.wsdls>
+        <eam.version>12.2</eam.version>
+        <eam.wsdls>/home/ricalm/cernbox/WORK/DEVELOPMENT/EAM_WSDL/HxGN_EAM_Web_Services_Toolkit_12.2/wsdl</eam.wsdls>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.xml.ws</groupId>
-            <artifactId>jakarta.xml.ws-api</artifactId>
-            <version>${jaxws-rt.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <licenses>
         <license>
@@ -112,22 +97,26 @@
         <url>https://github.com/cern-eam/javamerger-maven-plugin/issues</url>
     </issueManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>${jaxws-rt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <scm>
         <connection>scm:git:ssh://git@github.com/cern-eam/eam-wshub-proxyclient.git</connection>
         <tag>eam-wshub-proxyclient-12.1-1</tag>
         <url>https://github.com/cern-eam/eam-wshub-proxyclient</url>
     </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>maven-staging</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <build>
         <resources>
@@ -151,14 +140,13 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>${nexus-staging-maven-plugin.version}</version>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>${central-publishing-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>oss-cern-eam</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>true</autoPublish>
                 </configuration>
             </plugin>
             <plugin>
