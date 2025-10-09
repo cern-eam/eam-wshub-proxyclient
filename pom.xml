@@ -254,6 +254,16 @@
                 <wsdlUrl>${infor.wsdls}/Inspection/MP1022_AddInspectionAspect_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Inspection/MP1027_AddInspectionPoint_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Inspection/MP1031_AddInspectionAspectPoint_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1247_GetNonPOReceipt_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1244_SyncNonPOReceipt_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1246_GetNonPOReceiptDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1245_DeleteNonPOReceipt_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP1243_AddNonPOReceipt_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2014_AddNonPOReceiptPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2018_GetNonPOReceiptPartDefault_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2017_GetNonPOReceiptPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2016_DeleteNonPOReceiptPart_001.wsdl</wsdlUrl>
+                <wsdlUrl>${infor.wsdls}/Material/MP2015_SyncNonPOReceiptPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0220_AddIssueReturnTransaction_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0240_AddPart_001.wsdl</wsdlUrl>
                 <wsdlUrl>${infor.wsdls}/Material/MP0241_GetPart_001.wsdl</wsdlUrl>
@@ -533,6 +543,16 @@
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1027_addinspectionpoint_001/AddInspectionPointPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1031_addinspectionaspectpoint_001/AddInspectionAspectPointPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0220_addissuereturntransaction_001/AddIssueReturnTransactionPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1244_syncnonporeceipt_001/SyncNonPOReceiptPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1247_getnonporeceipt_001/GetNonPOReceiptPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1243_addnonporeceipt_001/AddNonPOReceiptPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1246_getnonporeceiptdefault_001/GetNonPOReceiptDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp1245_deletenonporeceipt_001/DeleteNonPOReceiptPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2014_addnonporeceiptpart_001/AddNonPOReceiptPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2018_getnonporeceiptpartdefault_001/GetNonPOReceiptPartDefaultPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2017_getnonporeceiptpart_001/GetNonPOReceiptPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2016_deletenonporeceiptpart_001/DeleteNonPOReceiptPartPT.java</sourceFile>
+                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp2015_syncnonporeceiptpart_001/SyncNonPOReceiptPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0240_addpart_001/AddPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0241_getpart_001/GetPartPT.java</sourceFile>
                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0242_syncpart_001/SyncPartPT.java</sourceFile>
