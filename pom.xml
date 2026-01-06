@@ -440,6 +440,17 @@
                         <wsdlUrl>${eam.wsdls}/Asset/MP3444_DeleteNonconformityObservation_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Asset/MP3445_GetNonconformityObservation_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Asset/MP3402_CreateNonconformityObservation_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7794_GetContractTemplate_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7796_SyncContractTemplate_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7795_AddContractTemplate_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7797_DeleteContractTemplate_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7793_GetContractTemplateDefault_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7830_DeleteContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7829_SyncContractTemplateChargeDefinition_001</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7828_AddContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7827_GetContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7831_GetContractTemplateChargeDefinitionDefault_001.wsdl</wsdlUrl>
+
                     </wsdlUrls>
                 </configuration>
             </plugin>
@@ -726,6 +737,16 @@
                                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3444_deletenonconformityobservation_001/DeleteNonconformityObservationPT.java</sourceFile>
                                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3445_getnonconformityobservation_001/GetNonconformityObservationPT.java</sourceFile>
                                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp3402_createnonconformityobservation_001/CreateNonconformityObservationPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7794_getcontracttemplate_001/GetContractTemplatePT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7796_synccontracttemplate_001/SyncContractTemplatePT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7795_addcontracttemplate_001/AddContractTemplatePT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7797_deletecontracttemplate_001/DeleteContractTemplatePT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7793_getcontracttemplatedefault_001/GetContractTemplateDefaultPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7830_deletecontracttemplatechargedefinition_001/DeleteContractTemplateChargeDefinitionPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7829_synccontracttemplatechargedefinition_001/SyncContractTemplateChargeDefinitionPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7828_addcontracttemplatechargedefinition_001/AddContractTemplateChargeDefinitionPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7827_getcontracttemplatechargedefinition_001/GetContractTemplateChargeDefinitionPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7831_getcontracttemplatechargedefinitiondefault_001/GetContractTemplateChargeDefinitionDefaultPT.java</sourceFile>
                             </sourceFiles>
                             <destinationPackage>net.datastream.wsdls.eamws</destinationPackage>
                             <classAnnotations>
