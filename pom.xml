@@ -446,7 +446,7 @@
                         <wsdlUrl>${eam.wsdls}/Work/MP7797_DeleteContractTemplate_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7793_GetContractTemplateDefault_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7830_DeleteContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
-                        <wsdlUrl>${eam.wsdls}/Work/MP7829_SyncContractTemplateChargeDefinition_001</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7829_SyncContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7828_AddContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7827_GetContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7831_GetContractTemplateChargeDefinitionDefault_001.wsdl</wsdlUrl>
