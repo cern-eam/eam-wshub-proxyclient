@@ -253,6 +253,10 @@
                         <wsdlUrl>${eam.wsdls}/Asset/MP0324_GetEquipmentCategory_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Asset/MP0325_SyncEquipmentCategory_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Asset/MP0326_DeleteEquipmentCategory_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Asset/MP0336_AddEquipmentUsageMeter_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Asset/MP0339_DeleteEquipmentUsageMeter_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Asset/MP0338_GetEquipmentUsageMeter_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Asset/MP0337_SyncEquipmentUsageMeter_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Base/MP0108_GetComments_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Base/MP0109_AddComments_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Base/MP0110_SyncComments_001.wsdl</wsdlUrl>
@@ -450,7 +454,10 @@
                         <wsdlUrl>${eam.wsdls}/Work/MP7828_AddContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7827_GetContractTemplateChargeDefinition_001.wsdl</wsdlUrl>
                         <wsdlUrl>${eam.wsdls}/Work/MP7831_GetContractTemplateChargeDefinitionDefault_001.wsdl</wsdlUrl>
-
+                        <wsdlUrl>${eam.wsdls}/Work/MP7018_AddPMScheduleActivity_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7020_DeletePMScheduleActivity_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7017_GetPMScheduleActivity_001.wsdl</wsdlUrl>
+                        <wsdlUrl>${eam.wsdls}/Work/MP7019_SyncPMScheduleActivity_001.wsdl</wsdlUrl>
                     </wsdlUrls>
                 </configuration>
             </plugin>
@@ -747,6 +754,14 @@
                                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7828_addcontracttemplatechargedefinition_001/AddContractTemplateChargeDefinitionPT.java</sourceFile>
                                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7827_getcontracttemplatechargedefinition_001/GetContractTemplateChargeDefinitionPT.java</sourceFile>
                                 <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7831_getcontracttemplatechargedefinitiondefault_001/GetContractTemplateChargeDefinitionDefaultPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7018_addpmscheduleactivity_001/AddPMScheduleActivityPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7020_deletepmscheduleactivity_001/DeletePMScheduleActivityPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7017_getpmscheduleactivity_001/GetPMScheduleActivityPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp7019_syncpmscheduleactivity_001/SyncPMScheduleActivityPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0336_addequipmentusagemeter_001/AddEquipmentUsageMeterPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0339_deleteequipmentusagemeter_001/DeleteEquipmentUsageMeterPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0338_getequipmentusagemeter_001/GetEquipmentUsageMeterPT.java</sourceFile>
+                                <sourceFile>${project.build.directory}/generated-sources/wsimport/net/datastream/wsdls/mp0337_syncequipmentusagemeter_001/SyncEquipmentUsageMeterPT.java</sourceFile>
                             </sourceFiles>
                             <destinationPackage>net.datastream.wsdls.eamws</destinationPackage>
                             <classAnnotations>
